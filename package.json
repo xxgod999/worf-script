@@ -1,7 +1,7 @@
 {
 	"name": "worf-script",
 	"version": "1.0.0",
-	"main": "index.ts",
+	"main": "bootstrap.ts",
 	"description": "Worf Script auto-pushes a selected lane with camera lock.",
 	"license": "GPL-3.0-or-later",
 	"repository": {
