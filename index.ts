@@ -15,15 +15,19 @@ import {
 } from "github.com/octarine-public/wrapper/index"
 
 new (class WorfScript {
-	private readonly entry = Menu.AddEntry("Worf Script")
-	private readonly enabledToggle = this.entry.AddToggle("Enabled", true)
-	private readonly laneDropdown = this.entry.AddDropdown(
+	private readonly entry = Menu.AddEntry("Utility")
+	private readonly menu = this.entry.AddNode(
+		"Worf Script",
+		"panorama/images/hud/reborn/icon_magic_resist_psd.vtex_c"
+	)
+	private readonly enabledToggle = this.menu.AddToggle("Enabled", true)
+	private readonly laneDropdown = this.menu.AddDropdown(
 		"Lane",
 		["Top", "Middle", "Bottom"],
 		1,
 		"Select lane to auto-push"
 	)
-	private readonly creepDistSlider = this.entry.AddSlider(
+	private readonly creepDistSlider = this.menu.AddSlider(
 		"Creep distance",
 		300,
 		0,
@@ -31,7 +35,7 @@ new (class WorfScript {
 		0,
 		"Target distance from friendly creeps"
 	)
-	private readonly enemyDistSlider = this.entry.AddSlider(
+	private readonly enemyDistSlider = this.menu.AddSlider(
 		"Enemy distance",
 		300,
 		0,
